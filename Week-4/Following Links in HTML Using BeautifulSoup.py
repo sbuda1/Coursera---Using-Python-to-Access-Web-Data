@@ -16,9 +16,9 @@ Hint: The first character of the name of the last page that you will load is: L
 
 import urllib
 from bs4 import BeautifulSoup
-url = raw_input('Enter Url: ')
-count = int(raw_input("Enter count: "))
-position = int(raw_input("Enter position:"))
+url = input('Enter Url: ')
+count = int(input("Enter count: "))
+position = int(input("Enter position:"))
 for i in range(count):
     html = urllib.urlopen(url).read()
     soup = BeautifulSoup(html)
@@ -32,7 +32,7 @@ for i in range(count):
         y = tag.text
         t.append(y)
     
-    print s[position-1]
-    print t[position-1]
+    print (s[position-1])
+    print (t[position-1])
     url = s[position-1]
 
